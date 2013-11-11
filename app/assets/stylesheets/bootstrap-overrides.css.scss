@@ -1,0 +1,52 @@
+// Place all the styles related to the game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background: url('bg.png');
+}
+
+.card{
+    background: #FFF;
+    border-radius: 4px;
+    height: 250px;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #EEE;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    color: #333333;
+    cursor: pointer;
+}
+.card.back{
+    background: url('pattern2.png');
+    background-position: -5px -10px;
+}
+.card.back number, .card.back symbol{
+    display: none;
+}
+
+.card.red{
+    color: #ff3b30;
+}
+number{
+    font-size: 26px;
+    text-align: center;
+    position: absolute;
+}
+symbol{
+    font-size: 30px;
+    line-height: 20px;
+}
+symbol.big{
+    font-size: 150px;
+    position: absolute;
+    top:100px;
+    left: 45px; 
+}
+
+number.invert{
+    -webkit-transform:rotate(120deg);
+    -moz-transform:rotate(180deg);
+    right: 10px;
+    bottom: 0;
+}
