@@ -9,11 +9,17 @@ class GameController < ApplicationController
 #         @cards.append(card)
         carte1 = {}
         carte1[:numar] = 10
-        carte1[:culoare] = 'A'
+        carte1[:culoare] = '&hearts;'
+        carte3 = {}
+        carte3[:numar] = 5
+        carte3[:culoare] = '&spades;'
+        carte4 = {}
+        carte4[:numar] = 7
+        carte4[:culoare] = '&spades;'
         carte2 = {}
         carte2[:numar] = 11
-        carte2[:culoare] = 'B'
-        Game.set_cards([carte1, carte2], [carte2, carte2])
+        carte2[:culoare] = '&spades;'
+        Game.set_cards([carte1, carte3, carte4, carte2], [carte3, carte2,carte1,carte4])
     end
 
     def index

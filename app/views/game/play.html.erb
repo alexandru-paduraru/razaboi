@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- simboluri
     &spades; frunza
     &clubs; trefla
@@ -6,36 +5,46 @@
     &hearts; inima rosie
 
  -->
+ 
+PAS :<%= @pas %>
+
+<br />
+
+MESAJ: <%= @message %>
+
+
+
 <div class="container">
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-2">
+        TU
         <div class="card red">
             <number>
-                7<br>
+                <%= @carte_jucator1[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
             <symbol class="big">
-                &spades;
+                <%= @carte_jucator1[:culoare].html_safe %>
             </symbol>
             <number class="invert">
-                7<br>
+                <%= @carte_jucator1[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
         </div>
     </div>
-    
       <div class="col-md-2">
-        <div class="card back">
+        DUSHAMNU
+        <div class="card">
             <number>
-                7<br>
+                <%= @carte_jucator2[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
             <symbol class="big">
-                &spades;
+                <%= @carte_jucator2[:culoare].html_safe %>
             </symbol>
             <number class="invert">
-                7<br>
+                <%= @carte_jucator2[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
         </div>
@@ -45,13 +54,4 @@
     
 </div>
 </div>
-=======
-board 
-<%= @pas %>
-<br />
-tu: <%= @carte_jucator1[:numar] %> <%= @carte_jucator2[:culoare] %>
-<br />
-<%= @carte_jucator2[:numar] %> <%= @carte_jucator2[:culoare] %>
 
-<%= @message %>
->>>>>>> bbb531dc0035648b1c0a0c4bb17d9589d105fbf7
