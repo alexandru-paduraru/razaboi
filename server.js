@@ -21,7 +21,7 @@ var server = http.createServer(function(request, response) {
     var newPostFormRegex = new RegExp('^/calc/?$');
     var pathname = url.parse(request.url).pathname;
     if (newPostFormRegex.test(pathname)) {
-        var rez = addon.add(3,5);
+        var rez = addon.add();
         renderNewPostForm(rez, response);
     } else {
         render404(request, response);

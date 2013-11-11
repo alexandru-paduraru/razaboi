@@ -6,24 +6,20 @@ using namespace v8;
 Handle<Value> Add(const Arguments& args) {
   HandleScope scope;
 
-  if (args.Length() < 2) {
-    ThrowException(Exception::TypeError(String::New("Wrong number of arguments")));
-    return scope.Close(Undefined());
-  }
+  Handle<Array> array = Array::New(3);
 
-  if (!args[0]->IsNumber() || !args[1]->IsNumber()) {
-    ThrowException(Exception::TypeError(String::New("Wrong arguments")));
-    return scope.Close(Undefined());
-  }
+  array->Set(0, Integer::New(2));
+  array->Set(1, Integer::New(3));
+  array->Set(2, Integer::New(4));
 
-  Local<Number> num = Number::New(args[0]->NumberValue() +
-      args[1]->NumberValue());
-  return scope.Close(num);
+  // Return the value through Close.
+  return scope.Close(array);
 }
 
 void Init(Handle<Object> exports) {
   exports->Set(String::NewSymbol("add"),
       FunctionTemplate::New(Add)->GetFunction());
 }
+
 
 NODE_MODULE(addon, Init)
