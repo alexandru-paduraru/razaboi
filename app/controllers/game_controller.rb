@@ -1,12 +1,12 @@
 class GameController < ApplicationController
     
     def from_c
-        hash_string = %x(./app/controllers/a.out)
-        hash_string
-#       hash_string = from_c
-        @cards = []
-        card = JSON.parse(hash_string)
-        @cards.append(card)
+#         hash_string = %x(./app/controllers/a.out)
+#         hash_string
+#         hash_string = from_c
+#         @cards = []
+#         card = JSON.parse(hash_string)
+#         @cards.append(card)
         carte1 = {}
         carte1[:numar] = 10
         carte1[:culoare] = 'A'
@@ -37,8 +37,10 @@ class GameController < ApplicationController
             @carte_jucator2 = Game.carti_jucator2.shift
             if @carte_jucator1[:numar] > @carte_jucator2[:numar]
                 @message = "Ai luat cartile."
+                Game.carti_jucator1.append(@carte_jucator2)
             else
                 @message = "Ai pierdut cartile."
+                Game.carti_jucator2.append(@carte_jucator1)
             end
         end
         render 'play'
