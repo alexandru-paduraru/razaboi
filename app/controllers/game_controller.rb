@@ -24,11 +24,11 @@ class GameController < ApplicationController
     def play
         Game.incrementare_pas
         @pas = Game.pas
-        if Game.carti_jucator1.count == 52
+        if Game.carti_jucator2.count == 0
             @message = "Ai castigat"
             @carte_jucator1 = nil
             @carte_jucator2 = nil
-        elsif Game.carti_jucator2.count == 52
+        elsif Game.carti_jucator1.count == 0
             @message = "Ai pierdut"
             @carte_jucator1 = nil
             @carte_jucator2 = nil
