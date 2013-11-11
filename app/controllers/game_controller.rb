@@ -39,14 +39,20 @@ class GameController < ApplicationController
             @carte_jucator1 = nil
             @carte_jucator2 = nil
         else
+            @numar1 = Game.carti_jucator1.count
             @carte_jucator1 = Game.carti_jucator1.shift
+            
+            @numar2 = Game.carti_jucator2.count
             @carte_jucator2 = Game.carti_jucator2.shift
+            
             if @carte_jucator1[:numar] > @carte_jucator2[:numar]
                 @message = "Ai luat cartile."
-                Game.carti_jucator1.append(@carte_jucator2)
+                Game.carti_jucator1.push(@carte_jucator2)
+                Game.carti_jucator1.push(@carte_jucator1)
             else
                 @message = "Ai pierdut cartile."
-                Game.carti_jucator2.append(@carte_jucator1)
+                Game.carti_jucator2.push(@carte_jucator1)
+                Game.carti_jucator2.push(@carte_jucator2)
             end
         end
         render 'play'

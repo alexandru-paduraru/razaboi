@@ -12,13 +12,13 @@ PAS :<%= @pas %>
 
 MESAJ: <%= @message %>
 
-
+<% if @carte_jucator1 && @carte_jucator2 %>
 
 <div class="container">
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-2">
-        TU
+        TU <%= @numar1 %>
         <div class="card red">
             <number>
                 <%= @carte_jucator1[:numar] %><br>
@@ -34,7 +34,7 @@ MESAJ: <%= @message %>
         </div>
     </div>
       <div class="col-md-2">
-        DUSHAMNU
+        DUSHAMNU <%= @numar2 %>
         <div class="card">
             <number>
                 <%= @carte_jucator2[:numar] %><br>
@@ -54,4 +54,10 @@ MESAJ: <%= @message %>
     
 </div>
 </div>
-
+<% else %>
+    <% if @carte_jucator1 == nil %>
+        Ai pierdut!
+    <% elsif @carte_jucator2 == nil %>
+        Ai castigat!
+    <% end %>
+<% end %>
