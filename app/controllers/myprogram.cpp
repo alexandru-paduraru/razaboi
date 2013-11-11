@@ -1,5 +1,8 @@
 #include<iostream>
+using namespace std;
 int main(){
 int a = 1; 
-std::cout << a <<std::endl;
+    string elemente = "{'1':{'numar':'7','culoare':'B'}}";
+    cout << elemente <<endl;
+
 }
