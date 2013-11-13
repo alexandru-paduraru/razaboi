@@ -17621,3 +17621,245 @@ Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 17:58:03 +0200
 =======
 >>>>>>> 14f5ac69074cc83149dc280a6004a2d2eaa7d024
 >>>>>>> cf039c0dbdc2f292db7a71f2899e77bf970c42e0
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:02:43 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 149ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:02:44 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:02:46 +0200
+Processing by GameController#play as HTML
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:02:46 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+Processing by GameController#play as HTML
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:02:50 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:02:54 +0200
+Processing by GameController#play as HTML
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:02:55 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+Processing by GameController#play as HTML
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:02:56 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+Processing by GameController#play as HTML
+  Rendered game/play.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:03:00 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+Processing by GameController#play as HTML
+  Rendered game/play.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:07:55 +0200
