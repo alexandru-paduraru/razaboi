@@ -1,0 +1,4 @@
+console.log('w');
+
+$('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+  

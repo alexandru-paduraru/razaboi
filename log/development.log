@@ -21714,3 +21714,1639 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:26:18
 
 
 Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:26:18 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:28:51 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 110ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:28:52 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:28:54 +0200
+Processing by GameController#deal as HTML
+  Rendered game/play.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:33:20 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:33:21 +0200
+Processing by GameController#deal as HTML
+ERROR: compiling _app_views_game_play_html_erb__2229832275445176078_70252495241680 RAISED /Users/Axelut/Developer/razaboi/app/views/game/play.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_game_play_html_erb__2229832275445176078_70252495241680(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "game/play";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; if @pas == 0 
+@output_buffer.safe_append='    Cartile au fost impartite.
+'; end         
+@output_buffer.safe_append='        PAS :';@output_buffer.append=( @pas );@output_buffer.safe_append=' |
+        
+        MESAJ: ';@output_buffer.append=( @message );@output_buffer.safe_append='
+        
+';         if @carte_jucator1 && @carte_jucator2 
+@output_buffer.safe_append='        
+        <div class="container">
+        <div class="row">
+            <div class="col-md-2">  TU ';@output_buffer.append=( @numar1 );@output_buffer.safe_append='  <br> DUSHAMNU ';@output_buffer.append=( @numar2 );@output_buffer.safe_append='</div>
+            <div class="col-md-10 playtable">
+            
+        
+            
+';               for i in 1..@numar1-1 
+@output_buffer.safe_append='                 ';@output_buffer.append=( render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "card-#{i%5}" } );@output_buffer.safe_append='  
+';               end 
+@output_buffer.safe_append='              
+              ';@output_buffer.append=( render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" } );@output_buffer.safe_append='
+              
+            
+        
+            
+';               for i in 1..@numar2-1 
+@output_buffer.safe_append='                 ';@output_buffer.append=( render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "card-#{i%5} all" } );@output_buffer.safe_append='  
+';               end 
+@output_buffer.safe_append='              
+              ';@output_buffer.append=( render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" } );@output_buffer.safe_append='
+        
+        
+            </div>
+            
+            
+            </div>
+';         else 
+                 if @carte_jucator1 == nil 
+@output_buffer.safe_append='                    Ai pierdut!
+';                 elsif @carte_jucator2 == nil 
+@output_buffer.safe_append='                    Ai castigat!
+';                 end 
+         end 
+     end 
+@output_buffer.safe_append='
+            
+        
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Axelut/Developer/razaboi/app/controllers/game_controller.rb:102:in `block (2 levels) in deal'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/mime_responds.rb:191:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/mime_responds.rb:191:in `respond_to'
+/Users/Axelut/Developer/razaboi/app/controllers/game_controller.rb:101:in `deal'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:403:in `_run__310345334113135536__process_action__callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__3731663541822604964__call__callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered game/play.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (/Users/Axelut/Developer/razaboi/app/views/game/play.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    46:             
+    47:         
+  app/controllers/game_controller.rb:102:in `block (2 levels) in deal'
+  app/controllers/game_controller.rb:101:in `deal'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:33:21 +0200
+Processing by GameController#deal as HTML
+ERROR: compiling _app_views_game_play_html_erb__2229832275445176078_70252495241680 RAISED /Users/Axelut/Developer/razaboi/app/views/game/play.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_game_play_html_erb__2229832275445176078_70252495241680(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "game/play";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; if @pas == 0 
+@output_buffer.safe_append='    Cartile au fost impartite.
+'; end         
+@output_buffer.safe_append='        PAS :';@output_buffer.append=( @pas );@output_buffer.safe_append=' |
+        
+        MESAJ: ';@output_buffer.append=( @message );@output_buffer.safe_append='
+        
+';         if @carte_jucator1 && @carte_jucator2 
+@output_buffer.safe_append='        
+        <div class="container">
+        <div class="row">
+            <div class="col-md-2">  TU ';@output_buffer.append=( @numar1 );@output_buffer.safe_append='  <br> DUSHAMNU ';@output_buffer.append=( @numar2 );@output_buffer.safe_append='</div>
+            <div class="col-md-10 playtable">
+            
+        
+            
+';               for i in 1..@numar1-1 
+@output_buffer.safe_append='                 ';@output_buffer.append=( render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "card-#{i%5}" } );@output_buffer.safe_append='  
+';               end 
+@output_buffer.safe_append='              
+              ';@output_buffer.append=( render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" } );@output_buffer.safe_append='
+              
+            
+        
+            
+';               for i in 1..@numar2-1 
+@output_buffer.safe_append='                 ';@output_buffer.append=( render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "card-#{i%5} all" } );@output_buffer.safe_append='  
+';               end 
+@output_buffer.safe_append='              
+              ';@output_buffer.append=( render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" } );@output_buffer.safe_append='
+        
+        
+            </div>
+            
+            
+            </div>
+';         else 
+                 if @carte_jucator1 == nil 
+@output_buffer.safe_append='                    Ai pierdut!
+';                 elsif @carte_jucator2 == nil 
+@output_buffer.safe_append='                    Ai castigat!
+';                 end 
+         end 
+     end 
+@output_buffer.safe_append='
+            
+        
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Axelut/Developer/razaboi/app/controllers/game_controller.rb:102:in `block (2 levels) in deal'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/mime_responds.rb:191:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/mime_responds.rb:191:in `respond_to'
+/Users/Axelut/Developer/razaboi/app/controllers/game_controller.rb:101:in `deal'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:403:in `_run__310345334113135536__process_action__callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__3731663541822604964__call__callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Axelut/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered game/play.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/Users/Axelut/Developer/razaboi/app/views/game/play.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    46:             
+    47:         
+  app/controllers/game_controller.rb:102:in `block (2 levels) in deal'
+  app/controllers/game_controller.rb:101:in `deal'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+Processing by GameController#deal as HTML
+  Rendered game/play.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:33:38 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:33:44 +0200
+Processing by GameController#deal as HTML
+  Rendered game/play.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:34:09 +0200
+Processing by GameController#deal as HTML
+  Rendered game/play.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    13:         
+    14:             
+    15:               <% for i in 1..@numar1-1 %>
+    16:                  <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "card-#{i%5}" } %>  
+    17:               <% end %>
+    18:               
+    19:               <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" } %>
+  app/views/game/play.html.erb:16:in `block in _app_views_game_play_html_erb__2229832275445176078_70252483114740'
+  app/views/game/play.html.erb:15:in `each'
+  app/views/game/play.html.erb:15:in `_app_views_game_play_html_erb__2229832275445176078_70252483114740'
+  app/controllers/game_controller.rb:102:in `block (2 levels) in deal'
+  app/controllers/game_controller.rb:101:in `deal'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.4ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:36:01 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:36:05 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:36:07 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:36:07 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:36:41 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (1.0ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:39:10 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:15 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:15 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:15 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:16 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:16 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:16 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:16 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:17 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:17 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:17 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:17 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:17 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:18 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:39:18 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:43:46 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:43:47 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:14 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:44:15 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:44:15 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:44:15 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.9ms)
+  Rendered game/play.js.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:44:16 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:44:17 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:44:17 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:44:18 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.card.top').html("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252477164660'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:44:45 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:44:46 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:44:47 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:44:47 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.6ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:45:42 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:45:43 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:45:43 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:45:44 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:45:44 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:45:44 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:45:45 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:46:31 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:32 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.7ms)
+  Rendered game/play.js.erb (2.7ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:46:45 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:46 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:46 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:47 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:47 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:47 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:47 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:47 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:48 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:49 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:46:49 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:46:55 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:46:57 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:46:59 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:47:01 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:47:01 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:47:02 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:47:03 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:47:03 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:47:04 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:47:04 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:47:05 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:47:06 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:47:07 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-13 18:49:40 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 18:49:41 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-13 18:49:41 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-13 18:49:42 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-13 18:49:42 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:43 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:44 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:44 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:45 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:45 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:47 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:47 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:48 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.3ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:48 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:49 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:49 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:49 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.4ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:50 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:50 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:51 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (1.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-13 18:49:51 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb___510160681525077026_70252483046220'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
