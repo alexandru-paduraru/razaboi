@@ -1,5 +1,5 @@
 <% if @pas == 0 %>
-    Cartile au fost impartite. Apasa play!
+    Cartile au fost impartite.
 <% else %>
     PAS :<%= @pas %> |
     
@@ -7,48 +7,82 @@
     
     <% if @carte_jucator1 && @carte_jucator2 %>
     
-    <div class="container">
-    <div class="row">
-        <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
-        <div class="col-md-10 playtable">
-            <div class="card back">
-                <number>
-                    <%= @carte_jucator1[:numar] %><br>
-                    <symbol>&spades;</symbol>
-                </number>
-                <symbol class="big">
-                    <%= @carte_jucator1[:culoare].html_safe %>
-                </symbol>
-                <number class="invert">
-                    <%= @carte_jucator1[:numar] %><br>
-                    <symbol>&spades;</symbol>
-                </number>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
+                <div class="col-md-10 playtable">
+                    <div class="card back">
+                        <number>
+                            <%= @carte_jucator1[:numar] %><br>
+                            <symbol>&spades;</symbol>
+                        </number>
+                        <symbol class="big">
+                            <%= @carte_jucator1[:culoare].html_safe %>
+                        </symbol>
+                        <number class="invert">
+                            <%= @carte_jucator1[:numar] %><br>
+                            <symbol>&spades;</symbol>
+                        </number>
+                    </div>
+                    
+                    <div class="card">
+                         <number>
+                            <%= @carte_jucator1[:numar] %><br>
+                            <symbol>&spades;</symbol>
+                        </number>
+                        <symbol class="big">
+                            <%= @carte_jucator1[:culoare].html_safe %>
+                        </symbol>
+                        <number class="invert">
+                            <%= @carte_jucator1[:numar] %><br>
+                            <symbol>&spades;</symbol>
+                        </number>
+                    </div>
+                    
+                </div>
+        
+        PAS :<%= @pas %> |
+        
+        MESAJ: <%= @message %>
+        
+        <% if @carte_jucator1 && @carte_jucator2 %>
+        
+        <div class="container">
+        <div class="row">
+            <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
+            <div class="col-md-10 playtable">
+            
+        
+            
+              <% for i in 1..@numar1-1 %>
+                 <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "card-#{i%5}" } %>  
+              <% end %>
+              
+              <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" } %>
+              
+            
+        
+            
+              <% for i in 1..@numar2-1 %>
+                 <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "card-#{i%5} all" } %>  
+              <% end %>
+              
+              <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" } %>
+        
+        
             </div>
             
-            <div class="card">
-                 <number>
-                    <%= @carte_jucator1[:numar] %><br>
-                    <symbol>&spades;</symbol>
-                </number>
-                <symbol class="big">
-                    <%= @carte_jucator1[:culoare].html_safe %>
-                </symbol>
-                <number class="invert">
-                    <%= @carte_jucator1[:numar] %><br>
-                    <symbol>&spades;</symbol>
-                </number>
-            </div>
             
-        </div>
-    </div>
-    
-    
-    </div>
-    <% else %>
-        <% if @carte_jucator1 == nil %>
-            Ai pierdut!
-        <% elsif @carte_jucator2 == nil %>
-            Ai castigat!
+            </div>
+        <% else %>
+                <% if @carte_jucator1 == nil %>
+                    Ai pierdut!
+                <% elsif @carte_jucator2 == nil %>
+                    Ai castigat!
+                <% end %>
         <% end %>
     <% end %>
+
 <% end %>
+            
+        

@@ -23,7 +23,40 @@ body{
     color: #333333;
     cursor: pointer;
     position: absolute;
+    transition: all 0.4s;
 }
+.card.all{
+    bottom: 0;
+}
+.card.top{
+    left: 270px;
+    top: 90px;
+     -webkit-transform:rotate(-4deg);
+    -moz-transform:rotate(-4deg);
+}
+.card.bottom{
+    left: 290px;
+    bottom: 110px;
+     -webkit-transform:rotate(7deg);
+    -moz-transform:rotate(7deg);
+}
+.card.card-1{
+    -webkit-transform:rotate(-6deg);
+    -moz-transform:rotate(-6deg);   
+}
+.card.card-2{
+    -webkit-transform:rotate(1deg);
+    -moz-transform:rotate(1deg);   
+}
+.card.card-3{
+    -webkit-transform:rotate(-2deg);
+    -moz-transform:rotate(-2deg);   
+}
+.card.card-4{
+    -webkit-transform:rotate(2deg);
+    -moz-transform:rotate(2deg);   
+}
+
 .card.back{
     background: url('pattern2.png');
     background-position: -5px -10px;
