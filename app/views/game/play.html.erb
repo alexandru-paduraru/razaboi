@@ -6,9 +6,7 @@
 
  -->
  
-PAS :<%= @pas %>
-
-<br />
+PAS :<%= @pas %> |
 
 MESAJ: <%= @message %>
 
@@ -16,10 +14,9 @@ MESAJ: <%= @message %>
 
 <div class="container">
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-2">
-        TU <%= @numar1 %>
-        <div class="card red">
+    <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
+    <div class="col-md-10 playtable">
+        <div class="card back">
             <number>
                 <%= @carte_jucator1[:numar] %><br>
                 <symbol>&spades;</symbol>
@@ -32,27 +29,25 @@ MESAJ: <%= @message %>
                 <symbol>&spades;</symbol>
             </number>
         </div>
-    </div>
-      <div class="col-md-2">
-        DUSHAMNU <%= @numar2 %>
+        
         <div class="card">
-            <number>
-                <%= @carte_jucator2[:numar] %><br>
+             <number>
+                <%= @carte_jucator1[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
             <symbol class="big">
-                <%= @carte_jucator2[:culoare].html_safe %>
+                <%= @carte_jucator1[:culoare].html_safe %>
             </symbol>
             <number class="invert">
-                <%= @carte_jucator2[:numar] %><br>
+                <%= @carte_jucator1[:numar] %><br>
                 <symbol>&spades;</symbol>
             </number>
         </div>
-    </div>  
-   
-    <div class="col-md-2"></div>
-    
+        
+    </div>
 </div>
+
+
 </div>
 <% else %>
     <% if @carte_jucator1 == nil %>
