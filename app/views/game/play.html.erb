@@ -1,58 +1,54 @@
-<!-- simboluri
-    &spades; frunza
-    &clubs; trefla
-    &diams; romb
-    &hearts; inima rosie
-
- -->
- 
-PAS :<%= @pas %> |
-
-MESAJ: <%= @message %>
-
-<% if @carte_jucator1 && @carte_jucator2 %>
-
-<div class="container">
-<div class="row">
-    <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
-    <div class="col-md-10 playtable">
-        <div class="card back">
-            <number>
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-            <symbol class="big">
-                <%= @carte_jucator1[:culoare].html_safe %>
-            </symbol>
-            <number class="invert">
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-        </div>
-        
-        <div class="card">
-             <number>
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-            <symbol class="big">
-                <%= @carte_jucator1[:culoare].html_safe %>
-            </symbol>
-            <number class="invert">
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-        </div>
-        
-    </div>
-</div>
-
-
-</div>
+<% if @pas == 0 %>
+    Cartile au fost impartite. Apasa play!
 <% else %>
-    <% if @carte_jucator1 == nil %>
-        Ai pierdut!
-    <% elsif @carte_jucator2 == nil %>
-        Ai castigat!
+    PAS :<%= @pas %> |
+    
+    MESAJ: <%= @message %>
+    
+    <% if @carte_jucator1 && @carte_jucator2 %>
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
+        <div class="col-md-10 playtable">
+            <div class="card back">
+                <number>
+                    <%= @carte_jucator1[:numar] %><br>
+                    <symbol>&spades;</symbol>
+                </number>
+                <symbol class="big">
+                    <%= @carte_jucator1[:culoare].html_safe %>
+                </symbol>
+                <number class="invert">
+                    <%= @carte_jucator1[:numar] %><br>
+                    <symbol>&spades;</symbol>
+                </number>
+            </div>
+            
+            <div class="card">
+                 <number>
+                    <%= @carte_jucator1[:numar] %><br>
+                    <symbol>&spades;</symbol>
+                </number>
+                <symbol class="big">
+                    <%= @carte_jucator1[:culoare].html_safe %>
+                </symbol>
+                <number class="invert">
+                    <%= @carte_jucator1[:numar] %><br>
+                    <symbol>&spades;</symbol>
+                </number>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    </div>
+    <% else %>
+        <% if @carte_jucator1 == nil %>
+            Ai pierdut!
+        <% elsif @carte_jucator2 == nil %>
+            Ai castigat!
+        <% end %>
     <% end %>
 <% end %>

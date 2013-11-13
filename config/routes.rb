@@ -6,6 +6,7 @@ Razboi::Application.routes.draw do
   root 'game#index'
   
   get '/game' => 'game#play', as: :play
+  get '/deal' => 'game#deal', as: :deal
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

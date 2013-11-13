@@ -23,7 +23,6 @@ class GameController < ApplicationController
     end
 
     def index
-        from_c
         render 'index'
     end
     
@@ -45,10 +44,21 @@ class GameController < ApplicationController
             @numar2 = Game.carti_jucator2.count
             @carte_jucator2 = Game.carti_jucator2.shift
             
+            @extra_carti1 = []
+            @extra_carti2 = []
+            
+            
             if @carte_jucator1[:numar] == @carte_jucator2[:numar]
-
-                @extra_carti1 = Game.primele_carti_jucator1(@carte_jucator1[:numar]) 
-                @extra_carti2 = Game.primele_carti_jucator2(@carte_jucator2[:numar])
+                ultima_carte1 = @carte_jucator1
+                ultima_carte2 = @carte_jucator2
+                
+                while ultima_carte1[:numar] == ultima_carte2[:numar]
+                    @extra_carti1 = @extra_carti1.concat(Game.primele_carti_jucator1(ultima_carte1[:numar]))
+                    @extra_carti2 = @extra_carti2.concat(Game.primele_carti_jucator2(ultima_carte2[:numar]))
+                    ultima_carte1 = @extra_carti1.last
+                    ultima_carte1 = @extra_carti2.last
+                    
+                end
                 
                 if @extra_carti1.last[:numar] > @extra_carti2.last[:numar]
                     @message = "Razboi. Vei castiga cartile."
@@ -71,7 +81,22 @@ class GameController < ApplicationController
                 Game.carti_jucator2.push(@carte_jucator2)
             end
         end
-        render 'play'
+        
+        respond_to do |format|
+            format.html{ render 'play'}
+            format.js
+        end
+    end
+    
+    def deal
+        from_c
+        @pas = 0
+        @message = nil
+        @carte_jucator1 = nil
+        @carte_jucator2 = nil                
+        respond_to do |format|
+            format.html{render 'play'}
+        end
     end
     
     
