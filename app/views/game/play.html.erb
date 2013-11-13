@@ -16,34 +16,25 @@ MESAJ: <%= @message %>
 <div class="row">
     <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
     <div class="col-md-10 playtable">
-        <div class="card back">
-            <number>
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-            <symbol class="big">
-                <%= @carte_jucator1[:culoare].html_safe %>
-            </symbol>
-            <number class="invert">
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-        </div>
-        
-        <div class="card">
-             <number>
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-            <symbol class="big">
-                <%= @carte_jucator1[:culoare].html_safe %>
-            </symbol>
-            <number class="invert">
-                <%= @carte_jucator1[:numar] %><br>
-                <symbol>&spades;</symbol>
-            </number>
-        </div>
-        
+    
+    <!--  jucator 1        -->
+    
+      <% for i in 1..@numar1-1 %>
+         <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "card-#{i%5}" } %>  
+      <% end %>
+      
+      <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" } %>
+      
+    
+      <!-- jucator 2        -->
+    
+      <% for i in 1..@numar2-1 %>
+         <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "card-#{i%5} all" } %>  
+      <% end %>
+      
+      <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" } %>
+
+
     </div>
 </div>
 
