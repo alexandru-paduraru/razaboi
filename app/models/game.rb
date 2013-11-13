@@ -26,4 +26,25 @@ class Game < ActiveRecord::Base
     @@pas = @@pas + 1
    end
    
+   def self.primele_carti_jucator1(numar)
+        carti = []
+        if @@carti_jucator1.count > numar
+            carti = @@carti_jucator1.shift(numar)
+        else
+          carti = @@carti_jucator1
+          @@carti_jucator1 = []  
+        end
+        carti
+   end
+   
+   def self.primele_carti_jucator2(numar)
+        carti = []
+        if @@carti_jucator2.count > numar
+            carti = @@carti_jucator2.shift(numar)
+        else
+          carti = @@carti_jucator2
+          @@carti_jucator2 = []  
+        end
+        carti
+   end    
 end
