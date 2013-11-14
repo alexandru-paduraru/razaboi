@@ -7,7 +7,7 @@ $('#numar_carti2').html("<%= @numar2 %>");
 
 <% if !@numar1 || !@numar2 || @numar1 == 0 || @numar2 == 0 %>
 
-$('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path)%>");
+$('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, class: 'btn btn-warning')%>");
 
 <% else %>
         $('#carti_existente1').html("");
