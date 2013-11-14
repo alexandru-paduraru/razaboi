@@ -48,7 +48,7 @@ class GameController < ApplicationController
             @extra_carti2 = []
             
             
-            # if @carte_jucator1[:numar] == @carte_jucator2[:numar]
+#             if @carte_jucator1[:numar] == @carte_jucator2[:numar]
 #                 ultima_carte1 = @carte_jucator1
 #                 ultima_carte2 = @carte_jucator2
 #                 
@@ -56,11 +56,11 @@ class GameController < ApplicationController
 #                     @extra_carti1 = @extra_carti1.concat(Game.primele_carti_jucator1(ultima_carte1[:numar]))
 #                     @extra_carti2 = @extra_carti2.concat(Game.primele_carti_jucator2(ultima_carte2[:numar]))
 #                     ultima_carte1 = @extra_carti1.last
-#                     ultima_carte1 = @extra_carti2.last
+#                     ultima_carte2 = @extra_carti2.last
 #                     
 #                 end
 #                 
-#                 if @extra_carti1.last[:numar] > @extra_carti2.last[:numar]
+#                 if ultima_carte1[:numar] > ultima_carte2[:numar]
 #                     @message = "Razboi. Vei castiga cartile."
 #                     Game.carti_jucator1.concat(@extra_carti2)
 #                     Game.carti_jucator1.concat(@extra_carti1)
@@ -69,7 +69,7 @@ class GameController < ApplicationController
 #                     Game.carti_jucator2.concat(@extra_carti1)
 #                     Game.carti_jucator2.concat(@extra_carti2)
 #                 end
-#                 
+                
             
             if @carte_jucator1[:numar] > @carte_jucator2[:numar]
                 @message = "Ai luat cartile."
