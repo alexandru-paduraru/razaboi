@@ -2,10 +2,12 @@ console.log('w');
 
 $('#pas').html("<%= @pas %>");
 $('#mesaj').html("<%= @message %>");
-$('#numar_carti1').html("<%= @numar1 %>");
-$('#numar_carti2').html("<%= @numar2 %>");
+$('#carti1').html("<%= @numar1 %><br /> <%= @carti1 %>");
+$('#carti2').html("<%= @numar2 %><br /> <%= @carti2 %>");
 
 <% if !@numar1 || !@numar2 || @numar1 == 0 || @numar2 == 0 %>
+
+
 
 $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, class: 'btn btn-warning')%>");
 
@@ -19,8 +21,10 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
              $('#carti_existente2').append("<%=  escape_javascript(render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5} all" }) %>");
        <% end %>
     
-    
-        $('#carte_actuala1').html("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
-        $('#carte_actuala2').html("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" }) %>");
+        $('#carte_actuala1').html("");
+        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
+        
+        $('#carte_actuala2').html("");
+        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
 
 <% end %>  

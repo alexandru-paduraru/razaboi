@@ -10,15 +10,19 @@ class GameController < ApplicationController
         carte1 = {}
         carte1[:numar] = 1
         carte1[:culoare] = '&hearts;'
-        carte3 = {}
-        carte3[:numar] = 3
-        carte3[:culoare] = '&spades;'
-        carte4 = {}
-        carte4[:numar] = 7
-        carte4[:culoare] = '&spades;'
+        
         carte2 = {}
         carte2[:numar] = 11
         carte2[:culoare] = '&spades;'
+        
+        carte3 = {}
+        carte3[:numar] = 3
+        carte3[:culoare] = '&spades;'
+        
+        carte4 = {}
+        carte4[:numar] = 7
+        carte4[:culoare] = '&spades;'
+
         Game.set_cards([carte1, carte3, carte4, carte2], [carte1, carte2,carte3,carte4])
     end
 
@@ -28,6 +32,8 @@ class GameController < ApplicationController
     
     def play
         Game.incrementare_pas
+        @carti1 = Game.carti_jucator1.map{|i| i[:numar]}.flatten
+        @carti2 = Game.carti_jucator2.map{|i| i[:numar]}.flatten
         @pas = Game.pas
         if Game.carti_jucator2.count == 0
             @message = "Ai castigat"
