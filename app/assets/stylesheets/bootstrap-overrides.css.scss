@@ -90,3 +90,15 @@ number.invert{
     right: 10px;
     bottom: 0;
 }
+.card.top.extra{
+    left: 350px;
+    top: 90px;
+     -webkit-transform:rotate(-4deg);
+    -moz-transform:rotate(-4deg);
+}
+.card.bottom.extra{
+    left: 350px;
+    bottom: 110px;
+     -webkit-transform:rotate(7deg);
+    -moz-transform:rotate(7deg);
+}

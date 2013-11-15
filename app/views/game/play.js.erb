@@ -1,9 +1,23 @@
 console.log('w');
 
+<% if @extra_carti1.any? %>
+    <% extra1 = @extra_carti1.map{|i| i[:numar]}.flatten %>
+    <% else %>
+    <% extra1 = "" %>
+<% end %>
+
+<% if @extra_carti2.any? %>
+    <% extra2 = @extra_carti2.map{|i| i[:numar]}.flatten %>
+    <% else %>
+    <% extra2 = "" %>
+<% end %>
 $('#pas').html("<%= @pas %>");
 $('#mesaj').html("<%= @message %>");
 $('#carti1').html("<%= @numar1 %><br /> <%= @carti1 %>");
 $('#carti2').html("<%= @numar2 %><br /> <%= @carti2 %>");
+
+$('#extra_carti1').html("<%= extra1 %>");
+$('#extra_carti2').html("<%= extra2 %>");
 
 <% if !@numar1 || !@numar2 || @numar1 == 0 || @numar2 == 0 %>
 
@@ -24,7 +38,19 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
         $('#carte_actuala1').html("");
         $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
         
+        <% if @extra_carti1.any? %>
+            <% @extra_carti1.each do |carte| %>
+                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: carte[:numar], move_class: "top extra" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
+            <% end %>
+        <% end %>
+        
         $('#carte_actuala2').html("");
         $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
+        
+        <% if @extra_carti2.any? %>
+            <% @extra_carti2.each do |carte| %>
+                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: carte[:numar], move_class: "bottom extra" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
+            <% end %>
+        <% end %>
 
 <% end %>  
