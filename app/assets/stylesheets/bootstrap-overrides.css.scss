@@ -7,8 +7,27 @@ body{
 .playtable{
     position: relative;
     width: 960px;
-    height: 700px;
+    height: 650px;
     background-color: rgba(255,255,255,.2);
+}
+.message{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.83);
+    border-radius: 4px;
+    font-size: 40px;
+    font-weight: 100;
+    left: 350px;
+    padding: 10px 32px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    z-index: 5;
+    display: none;
+}
+.message.win{
+    color: green;
+}
+.message.loose{
+    color: red;
 }
 .card{
     background: #FFF;
@@ -24,21 +43,52 @@ body{
     cursor: pointer;
     position: absolute;
     transition: all 0.4s;
+    z-index: 2;
 }
 .card.all{
     bottom: 0;
 }
 .card.top{
-    left: 270px;
-    top: 90px;
+    left: 0px;
+    top: 0px;
      -webkit-transform:rotate(-4deg);
-    -moz-transform:rotate(-4deg);
+    -moz-transform:rotate(-4deg); 
+    z-index: 3;   
 }
 .card.bottom{
-    left: 290px;
-    bottom: 110px;
+    left: 0px;
+    bottom: 0px;
      -webkit-transform:rotate(7deg);
     -moz-transform:rotate(7deg);
+    z-index: 4;
+}
+.card.top.playable{
+    left: 300px;
+    top: 100px;
+}
+.card.top.playable.win-top, .card.top.playable.win-bottom, .card.bottom.playable.win-top, .card.bottom.playable.win-bottom{
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+}
+.card.top.playable.win-top{
+    left: 4px;
+    top: 0px;
+}
+.card.top.playable.win-bottom{
+    left: 4px;
+    top:380px;
+}
+.card.bottom.playable{
+    left: 300px;
+    bottom: 100px;
+}
+.card.bottom.playable.win-top{
+    left: 4px;
+    bottom: 380px;
+}
+.card.bottom.playable.win-bottom{
+    left: 4px;
+    bottom: 0px;
 }
 .card.card-1{
     -webkit-transform:rotate(-6deg);
@@ -60,6 +110,10 @@ body{
 .card.back{
     background: url('pattern2.png');
     background-position: -5px -10px;
+    z-index: 2;
+}
+.card.back.win{
+    z-index: 1;
 }
 .card.back number, .card.back symbol{
     display: none;

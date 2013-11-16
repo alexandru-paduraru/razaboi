@@ -11,5 +11,5 @@
  *= require_self
  *= require twitter/bootstrap
  *= require bootstrap-overrides
-
+ *= require animation.css
  */

@@ -8,7 +8,7 @@ class GameController < ApplicationController
 #         card = JSON.parse(hash_string)
 #         @cards.append(card)
         carte1 = {}
-        carte1[:numar] = 2
+        carte1[:numar] = 1
         carte1[:culoare] = '&hearts;'
         
         carte2 = {}
@@ -23,7 +23,7 @@ class GameController < ApplicationController
         carte4[:numar] = 7
         carte4[:culoare] = '&spades;'
 
-        Game.set_cards([carte1, carte3, carte4, carte2], [carte1, carte2,carte4,carte3])
+        Game.set_cards([carte3, carte3, carte4, carte2], [carte1, carte2,carte3,carte4])
     end
 
     def index
@@ -57,17 +57,16 @@ class GameController < ApplicationController
                 @extra_carti1 = Game.primele_carti_jucator1(@carte_jucator1[:numar])
                 @extra_carti2 = Game.primele_carti_jucator2(@carte_jucator1[:numar])
                 
-                if @extra_carti1.any? == false
+                if @extra_carti1.any?
                     @message = "Razboi. Ai ramas fara carti."
                     Game.carti_jucator2.push(@carte_jucator1)
                     Game.carti_jucator2.push(@carte_jucator2)
                     Game.carti_jucator2.concat(@extra_carti2)
-                elsif @extra_carti2.any? == false
+                elsif @extra_carti2.any?
                     @message = "Razboi. Dusmanu a ramas fara carti."
                     Game.carti_jucator1.push(@carte_jucator2)
                     Game.carti_jucator1.push(@carte_jucator1)
                     Game.carti_jucator1.concat(@extra_carti1)
-                
                 elsif @extra_carti1.last[:numar] > @extra_carti2.last[:numar]
                     @message = "Razboi. Vei castiga cartile."
                     Game.carti_jucator1.push(@carte_jucator2)

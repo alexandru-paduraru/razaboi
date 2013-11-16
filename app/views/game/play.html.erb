@@ -4,9 +4,7 @@
         PAS :
             <div id="pas"> <%= @pas %> </div> 
         
-        MESAJ:
-            <div id="mesaj"> <%= @message %> </div>
-        
+        MESAJ:        
         <div class="container">
         <div class="row">
             <div class="col-md-2">  
@@ -18,28 +16,26 @@
                  <div id="extra_carti2"></div>
              </div>
             <div class="col-md-10 playtable">
-            
-          <div id="carti_existente1">
-           <% if @numar1 && @numar1 > 0 %>
-            
-              <% for i in 1..@numar1 %>
-                 <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5}" } %>  
-              <% end %>
-           <% end %>
-         </div>
-         <div id="carte_actuala1"></div>
-         <div id="carti_existente2">  
-           <% if @numar2 && @numar2 > 0 %>
-              <% for i in 1..@numar2 %>
-                 <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5} all" } %>  
-              <% end %>
-            <% end %>
-         </div>
-         <div id="carte_actuala2"></div>
-            </div>
-            
-            
-            </div>
+                  <div id="mesaj" class="message animated"><%= @message %> </div>
+                  <div id="carti_existente1">
+                   <% if @numar1 && @numar1 > 0 %>        
+                      <% for i in 1..@numar1 %>
+                         <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5}" } %>  
+                      <% end %>
+                   <% end %>
+                 </div>
+                 <div id="carte_actuala1"></div>
+                 <div id="carti_existente2">  
+                   <% if @numar2 && @numar2 > 0 %>
+                      <% for i in 1..@numar2 %>
+                         <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5} all" } %>  
+                      <% end %>
+                    <% end %>
+                 </div>
+                 <div id="carte_actuala2"></div>
+            </div>   
+          </div>
+        </div>
 
 
             

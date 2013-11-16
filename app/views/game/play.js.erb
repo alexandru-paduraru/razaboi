@@ -12,7 +12,6 @@ console.log('w');
     <% extra2 = "" %>
 <% end %>
 $('#pas').html("<%= @pas %>");
-$('#mesaj').html("<%= @message %>");
 $('#carti1').html("<%= @numar1 %><br /> <%= @carti1 %>");
 $('#carti2').html("<%= @numar2 %><br /> <%= @carti2 %>");
 
@@ -36,7 +35,12 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
        <% end %>
     
         $('#carte_actuala1').html("");
-        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
+        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("fast").appendTo('#carte_actuala1');
+        
+        setTimeout(function(){
+            $('#carte_actuala1 .card').addClass('playable');    
+        },200);
+        
         
         <% if @extra_carti1.any? %>
             <% @extra_carti1.each do |carte| %>
@@ -47,10 +51,30 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
         $('#carte_actuala2').html("");
         $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
         
+        setTimeout(function(){
+            $('#carte_actuala2 .card').addClass('playable');    
+        },500);
+        
         <% if @extra_carti2.any? %>
             <% @extra_carti2.each do |carte| %>
                     $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: carte[:numar], move_class: "bottom extra" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
             <% end %>
         <% end %>
-
+        
+        var mesaj = $('#mesaj');
+        setTimeout(function(){
+            mesaj.html("<%= @message %>").show().addClass('bounceIn');
+            setTimeout(function(){
+                mesaj.removeClass('bounceIn').addClass('bounceOut');
+                    carte1 = $('#carte_actuala1 .card');
+                    carte2 = $('#carte_actuala2 .card');
+                    carte1.addClass('win-bottom back win');
+                    carte2.addClass('win-bottom back win');
+            },2000);
+            mesaj.removeClass('bounceOut'); 
+        },1000);
+        
+       
+        
+        
 <% end %>  
