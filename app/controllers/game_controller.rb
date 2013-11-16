@@ -12,7 +12,7 @@ class GameController < ApplicationController
         carte1[:culoare] = '&hearts;'
         
         carte2 = {}
-        carte2[:numar] = 11
+        carte2[:numar] = 1
         carte2[:culoare] = '&spades;'
         
         carte3 = {}
@@ -24,6 +24,7 @@ class GameController < ApplicationController
         carte4[:culoare] = '&spades;'
 
         Game.set_cards([carte3, carte3, carte4, carte2], [carte1, carte2,carte3,carte4])
+
     end
 
     def index
@@ -59,6 +60,7 @@ class GameController < ApplicationController
                 
                 if @extra_carti1.any?
                     @message = "Razboi. Ai ramas fara carti."
+<<<<<<< HEAD
                     Game.carti_jucator2.push(@carte_jucator1)
                     Game.carti_jucator2.push(@carte_jucator2)
                     Game.carti_jucator2.concat(@extra_carti2)
@@ -67,6 +69,29 @@ class GameController < ApplicationController
                     Game.carti_jucator1.push(@carte_jucator2)
                     Game.carti_jucator1.push(@carte_jucator1)
                     Game.carti_jucator1.concat(@extra_carti1)
+=======
+                    if @carte_jucator1[:numar] < @extra_carti2.last[:numar]
+                        Game.carti_jucator2.push(@carte_jucator1)
+                        Game.carti_jucator2.push(@carte_jucator2)
+                        Game.carti_jucator2.concat(@extra_carti2)
+                    else       
+                        Game.carti_jucator1.push(@carte_jucator2)
+                        Game.carti_jucator1.concat(@extra_carti2)
+                        Game.carti_jucator1.push(@carte_jucator1)
+
+                    end
+                elsif @extra_carti2.any? == false
+                    @message = "Razboi. Dusmanu a ramas fara carti."
+                    if @carte_jucator2[:numar] < @extra_carti1.last[:numar]
+                        Game.carti_jucator1.push(@carte_jucator2)
+                        Game.carti_jucator1.push(@carte_jucator1)
+                        Game.carti_jucator1.concat(@extra_carti1)
+                    else
+                        Game.carti_jucator2.push(@carte_jucator1)
+                        Game.carti_jucator2.concat(@extra_carti1)
+                        Game.carti_jucator2.push(@carte_jucator2)
+                    end
+>>>>>>> 71d6d9abd0026b1a6857f982c4d37b16ee85060b
                 elsif @extra_carti1.last[:numar] > @extra_carti2.last[:numar]
                     @message = "Razboi. Vei castiga cartile."
                     Game.carti_jucator1.push(@carte_jucator2)
