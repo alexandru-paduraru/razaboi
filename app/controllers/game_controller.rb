@@ -23,7 +23,7 @@ class GameController < ApplicationController
         carte4[:numar] = 7
         carte4[:culoare] = '&spades;'
 
-        Game.set_cards([carte1, carte2],[carte3, carte4])
+        Game.set_cards([carte1, carte2,carte3, carte4],[carte3, carte4,carte1, carte2])
 
     end
 
@@ -38,12 +38,15 @@ class GameController < ApplicationController
         @pas = Game.pas
         @extra_carti1 = []
         @extra_carti2 = [] 
+        @message = {}
         if Game.carti_jucator2.count == 0
-            @message = "Ai castigat"
+            @message[:info] = "Ai castigat"
+            @message[:winner] = 1
             @carte_jucator1 = nil
             @carte_jucator2 = nil
         elsif Game.carti_jucator1.count == 0
-            @message = "Ai pierdut"
+            @message[:info] = "Ai pierdut"
+            @message[:winner] = 2
             @carte_jucator1 = nil
             @carte_jucator2 = nil
         else
@@ -59,7 +62,8 @@ class GameController < ApplicationController
                 @extra_carti2 = Game.primele_carti_jucator2(@carte_jucator1[:numar])
                 
                 if @extra_carti1.any?
-                    @message = "Razboi. Ai ramas fara carti."
+                    @message[:info] = "Razboi. Ai ramas fara carti."
+                    @message[:winner] = 2
                     if @carte_jucator1[:numar] < @extra_carti2.last[:numar]
                         Game.carti_jucator2.push(@carte_jucator1)
                         Game.carti_jucator2.push(@carte_jucator2)
@@ -71,7 +75,8 @@ class GameController < ApplicationController
 
                     end
                 elsif @extra_carti2.any? == false
-                    @message = "Razboi. Dusmanu a ramas fara carti."
+                    @message[:info] = "Razboi. Dusmanu a ramas fara carti."
+                    @message[:winner] = 1
                     if @carte_jucator2[:numar] < @extra_carti1.last[:numar]
                         Game.carti_jucator1.push(@carte_jucator2)
                         Game.carti_jucator1.push(@carte_jucator1)
@@ -83,13 +88,15 @@ class GameController < ApplicationController
                     end
 
                 elsif @extra_carti1.last[:numar] > @extra_carti2.last[:numar]
-                    @message = "Razboi. Vei castiga cartile."
+                    @message[:info] = "Razboi. Vei castiga cartile."
+                    @message[:winner] = 1
                     Game.carti_jucator1.push(@carte_jucator2)
                     Game.carti_jucator1.concat(@extra_carti2)
                     Game.carti_jucator1.push(@carte_jucator1)
                     Game.carti_jucator1.concat(@extra_carti1)
                 else
-                    @message = "Razboi. Vei pierde cartile."
+                    @message[:info] = "Razboi. Vei pierde cartile."
+                    @message[:winner] = 2
                     Game.carti_jucator2.push(@carte_jucator1)
                     Game.carti_jucator2.concat(@extra_carti1)
                     Game.carti_jucator2.push(@carte_jucator2)
@@ -99,11 +106,13 @@ class GameController < ApplicationController
             
             
             elsif @carte_jucator1[:numar] > @carte_jucator2[:numar]
-                @message = "Ai luat cartile."
+                @message[:info] = "Ai castigat cartile."
+                @message[:winner] = 1
                 Game.carti_jucator1.push(@carte_jucator2)
                 Game.carti_jucator1.push(@carte_jucator1)
             else
-                @message = "Ai pierdut cartile."
+                @message[:info] = "Ai pierdut cartile."
+                @message[:winner] = 2
                 Game.carti_jucator2.push(@carte_jucator1)
                 Game.carti_jucator2.push(@carte_jucator2)
             end
@@ -118,7 +127,7 @@ class GameController < ApplicationController
     def deal
         from_c
         @pas = 0
-        @message = nil
+        @message = {}
         @carte_jucator1 = nil
         @carte_jucator2 = nil                
         

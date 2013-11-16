@@ -16,7 +16,11 @@
                  <div id="extra_carti2"></div>
              </div>
             <div class="col-md-10 playtable">
-                  <div id="mesaj" class="message animated"><%= @message %> </div>
+                  <div id="mesaj" class="message animated">
+                    <% if @message  %> 
+                    <%= @message[:info] %>
+                    <% end %>
+                  </div>
                   <div id="carti_existente1">
                    <% if @numar1 && @numar1 > 0 %>        
                       <% for i in 1..@numar1 %>

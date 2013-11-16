@@ -26,11 +26,11 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
 
 <% else %>
         $('#carti_existente1').html("");
-       <% for i in 1..@numar1 %> 
+       <% for i in 1..@numar1-1 %> 
              $('#carti_existente1').append("<%=  escape_javascript(render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5}" }) %>"); 
        <% end %>
        $('#carti_existente2').html("");
-       <% for i in 1..@numar2 %>
+       <% for i in 1..@numar2-1 %>
              $('#carti_existente2').append("<%=  escape_javascript(render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5} all" }) %>");
        <% end %>
     
@@ -63,13 +63,18 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
         
         var mesaj = $('#mesaj');
         setTimeout(function(){
-            mesaj.html("<%= @message %>").show().addClass('bounceIn');
+            mesaj.html("<%= @message[:info] %>").show().addClass('bounceIn');
             setTimeout(function(){
                 mesaj.removeClass('bounceIn').addClass('bounceOut');
                     carte1 = $('#carte_actuala1 .card');
                     carte2 = $('#carte_actuala2 .card');
-                    carte1.addClass('win-bottom back win');
-                    carte2.addClass('win-bottom back win');
+                    if(<%= @message[:winner] %> == 2){
+                        carte1.addClass('win-bottom back win');
+                        carte2.addClass('win-bottom back win');
+                    } else {
+                        carte1.addClass('win-top back win');
+                        carte2.addClass('win-top back win');
+                    }
             },2000);
             mesaj.removeClass('bounceOut'); 
         },1000);
