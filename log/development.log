@@ -23352,6 +23352,160 @@ ActionView::Template::Error (undefined method `[]' for nil:NilClass):
   Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 371ms (Views: 313.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-16 14:42:46 +0200
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-16 14:42:49 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (1.0ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-16 14:42:49 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:50 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.8ms)
+  Rendered game/play.js.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:50 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:51 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:51 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:52 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:52 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:52 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:52 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:53 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:53 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:53 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:54 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:54 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:54 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:54 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (5.0ms)
+Completed 500 Internal Server Error in 8ms
+=======
 Started GET "/" for 127.0.0.1 at 2013-11-14 17:21:02 +0200
 Processing by GameController#index as HTML
   Rendered game/index.html.erb within layouts/application (2.6ms)
@@ -23504,12 +23658,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:16 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (25.4ms)
 Completed 500 Internal Server Error in 28ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.9ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:55 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23523,12 +23693,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:16 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
 Completed 500 Internal Server Error in 4ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:56 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (1.2ms)
+Completed 500 Internal Server Error in 4ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23542,12 +23728,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:16 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.2ms)
 Completed 500 Internal Server Error in 5ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:56 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23561,12 +23763,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:17 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
 Completed 500 Internal Server Error in 5ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:57 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23580,12 +23798,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:17 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
 Completed 500 Internal Server Error in 4ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:57 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23599,12 +23833,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:17 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.0ms)
 Completed 500 Internal Server Error in 5ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:57 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23618,12 +23868,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:20 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.2ms)
 Completed 500 Internal Server Error in 6ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:57 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23637,12 +23903,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:20 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.0ms)
 Completed 500 Internal Server Error in 4ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:59 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23656,12 +23938,27 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:21 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.0ms)
 Completed 500 Internal Server Error in 4ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:59 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.9ms)
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23674,6 +23971,7 @@ ActionView::Template::Error (undefined method `[]' for nil:NilClass):
 Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:21 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 Completed 500 Internal Server Error in 4ms
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
@@ -23681,6 +23979,21 @@ ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:42:59 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23694,12 +24007,28 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:22 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
 Completed 500 Internal Server Error in 5ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:00 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.8ms)
+Completed 500 Internal Server Error in 3ms
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -23713,12 +24042,202 @@ Started GET "/game" for 127.0.0.1 at 2013-11-14 17:21:22 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (1.1ms)
 Completed 500 Internal Server Error in 4ms
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: console.log('w');
     2: 
     3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
     4:   
+<<<<<<< HEAD
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/deal" for 127.0.0.1 at 2013-11-16 14:43:00 +0200
+Processing by GameController#deal as HTML
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/_card.html.erb (0.1ms)
+  Rendered game/play.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-16 14:43:00 +0200
+
+
+Started GET "/assets/bootstrap-overrides.css?body=1" for 127.0.0.1 at 2013-11-16 14:43:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/assets/pattern2.png" for 127.0.0.1 at 2013-11-16 14:43:01 +0200
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:02 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/play.js.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:03 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:03 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:03 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.5ms)
+  Rendered game/play.js.erb (1.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:03 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.4ms)
+  Rendered game/play.js.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:04 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:04 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:04 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:06 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:06 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:06 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.3ms)
+  Rendered game/play.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:07 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:07 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:07 +0200
+Processing by GameController#play as JS
+  Rendered game/_card.html.erb (0.2ms)
+  Rendered game/play.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:07 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/game" for 127.0.0.1 at 2013-11-16 14:43:07 +0200
+Processing by GameController#play as JS
+  Rendered game/play.js.erb (1.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: console.log('w');
+    2: 
+    3: $('.playtable').append("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>");
+    4:   
+  app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__2240299897417340617_70133790416020'
+  app/controllers/game_controller.rb:85:in `play'
+
+
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Axelut/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+=======
   app/views/game/play.js.erb:3:in `_app_views_game_play_js_erb__3999174337431117352_70360241740740'
   app/controllers/game_controller.rb:85:in `play'
 
@@ -41962,6 +42481,7 @@ Processing by GameController#play as JS
   Rendered game/_card.html.erb (0.3ms)
   Rendered game/play.js.erb (17.3ms)
 Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2013-11-16 14:43:52 +0200
@@ -43753,3 +44273,6 @@ Started GET "/game" for 127.0.0.1 at 2013-11-16 15:00:29 +0200
 Processing by GameController#play as JS
   Rendered game/play.js.erb (0.4ms)
 Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+=======
+>>>>>>> b350deb7023d9b8937d4df975355ea0f0186ad81
+>>>>>>> 4b13a9cf60a7efb24bff2a8ca82ccb66a758f955
