@@ -1,30 +1,41 @@
 <% if @pas == 0 %>
     Cartile au fost impartite.
 <% end %>        
-        PAS :<%= @pas %> |
+        PAS :
+            <div id="pas"> <%= @pas %> </div> 
         
-        MESAJ: <%= @message %>
+        MESAJ:
+            <div id="mesaj"> <%= @message %> </div>
         
         <div class="container">
         <div class="row">
-            <div class="col-md-2">  TU <%= @numar1 %>  <br> DUSHAMNU <%= @numar2 %></div>
+            <div class="col-md-2">  
+            TU:     
+                <div id="carti1"><%= @numar1 %></div>  
+                <div id="extra_carti1"></div>
+            DUSHAMNU:
+                 <div id="carti2"><%= @numar2 %></div>
+                 <div id="extra_carti2"></div>
+             </div>
             <div class="col-md-10 playtable">
             
-        
+          <div id="carti_existente1">
+           <% if @numar1 && @numar1 > 0 %>
             
               <% for i in 1..@numar1 %>
                  <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5}" } %>  
               <% end %>
-              
+           <% end %>
+         </div>
+         <div id="carte_actuala1"></div>
+         <div id="carti_existente2">  
+           <% if @numar2 && @numar2 > 0 %>
               <% for i in 1..@numar2 %>
                  <%= render partial: 'card', locals: {view: "back", symbol: '&spades;', number: 0, move_class: "card-#{i%5} all" } %>  
               <% end %>
-              
-              <% if @carte_jucator2.present? %>
-              <%= render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" } %>    
-              <% end %>
-        
-        
+            <% end %>
+         </div>
+         <div id="carte_actuala2"></div>
             </div>
             
             
