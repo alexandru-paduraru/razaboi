@@ -1,4 +1,3 @@
-console.log('w');
 
 <% if @extra_carti1.any? %>
     <% extra1 = @extra_carti1.map{|i| i[:numar]}.flatten %>
@@ -35,32 +34,55 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
        <% end %>
     
         $('#carte_actuala1').html("");
-        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("fast").appendTo('#carte_actuala1');
+        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: @carte_jucator1[:culoare], number: @carte_jucator1[:numar], move_class: "top" }) %>").fadeIn("fast").appendTo('#carte_actuala1');
         
         setTimeout(function(){
-            $('#carte_actuala1 .card').addClass('playable');    
+            $('#carte_actuala1 .card:first').addClass('playable');    
         },200);
         
-        
-        <% if @extra_carti1.any? %>
-            <% @extra_carti1.each do |carte| %>
-                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: carte[:numar], move_class: "top extra" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
-            <% end %>
-        <% end %>
-        
         $('#carte_actuala2').html("");
-        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: @carte_jucator2[:numar], move_class: "bottom" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
+        $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: @carte_jucator2[:culoare], number: @carte_jucator2[:numar], move_class: "bottom" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
         
         setTimeout(function(){
             $('#carte_actuala2 .card').addClass('playable');    
-        },500);
+        },700);
+    
+        var time = 1000;
+         
+        <% if @extra_carti1.any? %>
+            <% @extra_carti1.each do |carte| %>
+                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: carte[:culoare], number: carte[:numar], move_class: "top extra" }) %>").fadeIn("fast").appendTo('#carte_actuala1');
+            <% end %>
+
+           
+            $cards = $('#carte_actuala1 .extra');
+            
+            console.log($cards);
+            $cards.each(function(indexInArray) {
+                  var card = $(this);
+                  setTimeout( function(){ addPositioningClass(card,indexInArray); }, time);
+                  time += 500;
+            });
+        <% end %>
+        
+        
         
         <% if @extra_carti2.any? %>
             <% @extra_carti2.each do |carte| %>
-                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: '&spades;', number: carte[:numar], move_class: "bottom extra" }) %>").fadeIn("slow").appendTo('#carte_actuala1');
+                    $("<%=  escape_javascript(render partial: 'card', locals: {view: "front", symbol: carte[:culoare], number: carte[:numar], move_class: "bottom extra" }) %>").fadeIn("slow").appendTo('#carte_actuala2');
             <% end %>
+            $cards = $('#carte_actuala2 .extra');
+        
+            console.log($cards);
+            $cards.each(function(indexInArray) {
+              var card = $(this);
+              setTimeout( function(){ addPositioningClass(card,indexInArray); }, time);
+              time += 500;
+            });
+
         <% end %>
         
+                
         var mesaj = $('#mesaj');
         setTimeout(function(){
             mesaj.html("<%= @message[:info] %>").show().addClass('bounceIn');
@@ -69,17 +91,29 @@ $('.playtable').html("<%= escape_javascript(link_to 'Play again', deal_path, cla
                     carte1 = $('#carte_actuala1 .card');
                     carte2 = $('#carte_actuala2 .card');
                     if(<%= @message[:winner] %> == 2){
-                        carte1.addClass('win-bottom back win');
-                        carte2.addClass('win-bottom back win');
+                        carte1.each(function(){
+                            $(this).removeClass('extra').css('left','0px').addClass('win-bottom back win');
+                        });
+                        carte2.each(function(){
+                            $(this).removeClass('extra').css('left','0px').addClass('win-bottom back win');
+                        });
+                    
                     } else {
-                        carte1.addClass('win-top back win');
-                        carte2.addClass('win-top back win');
+                        carte1.each(function(){
+                            $(this).removeClass('extra').css('left','0px').addClass('win-top back win');
+                        });
+                        carte2.each(function(){
+                            $(this).removeClass('extra').css('left','0px').addClass('win-top back win');
+                        });
                     }
             },2000);
             mesaj.removeClass('bounceOut'); 
-        },1000);
-        
-       
+        },time);       
         
         
 <% end %>  
+
+function addPositioningClass($card, position){
+  $card.addClass('playable-extra').css('left',380 + position * 20 + 'px');
+  console.log($card);
+}

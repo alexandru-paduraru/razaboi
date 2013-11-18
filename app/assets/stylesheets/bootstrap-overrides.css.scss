@@ -4,18 +4,42 @@
 body{
     background: url('bg.png');
 }
+address{
+    color: #FFFFFF;
+    margin-top: 170px;
+}
+.btn-warning{
+    background-color: rgba(239, 174, 77, 0);
+    border: 3px solid;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 15px 30px;
+    transition: all 0.2s;
+}
 .playtable{
     position: relative;
-    width: 960px;
+    width: 720px;
     height: 650px;
-    background-color: rgba(255,255,255,.2);
+/*     background-color: rgba(255,255,255,.2); */
+}
+.main{
+    margin-top: 70px;
+    text-align: center;
+}
+.big-title{
+    color: #FFFFFF;
+    font-family: 'Russo One', sans-serif;
+    font-size: 70px;
+    text-shadow: 4px 4px 0 #1B5937;
+    text-transform: uppercase;
+    margin-bottom: 80px;
 }
 .message{
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.83);
     border-radius: 4px;
     font-size: 40px;
     font-weight: 100;
-    left: 350px;
+    left: 250px;
     padding: 10px 32px;
     position: absolute;
     text-align: center;
@@ -70,11 +94,11 @@ body{
     -webkit-transform:rotate(0deg);
     -moz-transform:rotate(0deg);
 }
-.card.top.playable.win-top{
+.card.top.playable.win-top, .card.top.playable-extra.win-top{
     left: 4px;
     top: 0px;
 }
-.card.top.playable.win-bottom{
+.card.top.playable.win-bottom, .card.top.playable-extra.win-bottom{
     left: 4px;
     top:380px;
 }
@@ -82,11 +106,11 @@ body{
     left: 300px;
     bottom: 100px;
 }
-.card.bottom.playable.win-top{
+.card.bottom.playable.win-top, .card.bottom.playable-extra.win-top{
     left: 4px;
     bottom: 380px;
 }
-.card.bottom.playable.win-bottom{
+.card.bottom.playable.win-bottom, .card.bottom.playable-extra.win-bottom {
     left: 4px;
     bottom: 0px;
 }
@@ -145,14 +169,46 @@ number.invert{
     bottom: 0;
 }
 .card.top.extra{
-    left: 350px;
-    top: 90px;
+    left: 0px;
+    top: 0px;
      -webkit-transform:rotate(-4deg);
     -moz-transform:rotate(-4deg);
 }
 .card.bottom.extra{
-    left: 350px;
-    bottom: 110px;
+    left: 0px;
+    bottom: 0px;
      -webkit-transform:rotate(7deg);
     -moz-transform:rotate(7deg);
+}
+
+.card.top.extra.playable-extra{
+    top:90px;
+    left:380px;
+}
+.card.bottom.extra.playable-extra{
+    bottom: 100px;
+    left: 380px;
+}
+
+.game-stats{
+    border: 2px solid rgba(255, 254, 0, 0.67);
+    border-radius: 4px;
+    color: #FFF;
+}
+.game-stats .header{
+    color: #F6FF63;
+    background-color: rgba(13, 105, 2, 0.58);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(255, 254, 0, 0.67);
+    border-top: 2px solid rgba(255, 254, 0, 0.67);
+}
+.game-stats .header:first-child{
+    border-top: 0;
+}
+.game-stats .content{
+    padding: 10px;
 }

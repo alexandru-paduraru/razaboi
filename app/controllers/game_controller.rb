@@ -12,18 +12,25 @@ class GameController < ApplicationController
         carte1[:culoare] = '&hearts;'
         
         carte2 = {}
-        carte2[:numar] = 1
-        carte2[:culoare] = '&spades;'
+        carte2[:numar] = 2
+        carte2[:culoare] = '&diams;'
         
         carte3 = {}
         carte3[:numar] = 3
-        carte3[:culoare] = '&spades;'
+        carte3[:culoare] = '&hearts;'
         
         carte4 = {}
         carte4[:numar] = 7
-        carte4[:culoare] = '&spades;'
+        carte4[:culoare] = '&clubs;'
 
-        Game.set_cards([carte1, carte2,carte3, carte4],[carte3, carte4,carte1, carte2])
+        carte5 = {}
+        carte5[:numar] = 5
+        carte5[:culoare] = '&diams;'
+        
+        carte6 = {}
+        carte6[:numar] = 6
+        carte6[:culoare] = '&clubs;'
+        Game.set_cards([carte2, carte6 ,carte4, carte5, carte3, carte2],[carte2, carte4,carte6, carte2, carte5, carte3,carte2])
 
     end
 

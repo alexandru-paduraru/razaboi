@@ -1,5 +1,11 @@
   <%= link_to play_path, remote: true do %>
-      <div class="card <%= view %> <%= move_class %>">
+  <% if symbol == '&spades;' || symbol == '&clubs;' 
+        color = 'black'
+    else
+        color = 'red';
+    end 
+   %>
+      <div class="card <%= view %> <%= move_class %> <%= color %>">
                 <number>
                     <%= number %><br>
                     <symbol><%= raw(symbol) %></symbol>
