@@ -68,14 +68,15 @@ class GameController < ApplicationController
                 @extra_carti1 = Game.primele_carti_jucator1(@carte_jucator1[:numar])
                 @extra_carti2 = Game.primele_carti_jucator2(@carte_jucator1[:numar])
                 
-                if @extra_carti1.any?
+                if @extra_carti1.any? == false
                     @message[:info] = "Razboi. Ai ramas fara carti."
-                    @message[:winner] = 2
                     if @carte_jucator1[:numar] < @extra_carti2.last[:numar]
+                        @message[:winner] = 2
                         Game.carti_jucator2.push(@carte_jucator1)
                         Game.carti_jucator2.push(@carte_jucator2)
                         Game.carti_jucator2.concat(@extra_carti2)
-                    else       
+                    else
+                        @message[:winner] = 1       
                         Game.carti_jucator1.push(@carte_jucator2)
                         Game.carti_jucator1.concat(@extra_carti2)
                         Game.carti_jucator1.push(@carte_jucator1)
@@ -83,12 +84,14 @@ class GameController < ApplicationController
                     end
                 elsif @extra_carti2.any? == false
                     @message[:info] = "Razboi. Dusmanu a ramas fara carti."
-                    @message[:winner] = 1
+                    
                     if @carte_jucator2[:numar] < @extra_carti1.last[:numar]
+                        @message[:winner] = 1
                         Game.carti_jucator1.push(@carte_jucator2)
                         Game.carti_jucator1.push(@carte_jucator1)
                         Game.carti_jucator1.concat(@extra_carti1)
                     else
+                        @message[:winner] = 2
                         Game.carti_jucator2.push(@carte_jucator1)
                         Game.carti_jucator2.concat(@extra_carti1)
                         Game.carti_jucator2.push(@carte_jucator2)
