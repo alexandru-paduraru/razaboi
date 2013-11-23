@@ -2,14 +2,14 @@ class GameController < ApplicationController
     
     def from_c
     
-        hash_string = %x(./app/controllers/a.out)
-        @hash = hash_string
+       # hash_string = %x(./app/controllers/a.out)
+       # @hash = hash_string
 #         hash_string
 #         hash_string = from_c
 #         @cards = []
 #         card = JSON.parse(hash_string)
 #         @cards.append(card)
-
+        
         carte1 = {}
         carte1[:numar] = 1
         carte1[:culoare] = '&hearts;'
@@ -33,11 +33,30 @@ class GameController < ApplicationController
         carte6 = {}
         carte6[:numar] = 6
         carte6[:culoare] = '&clubs;'
-        Game.set_cards([carte2, carte6 ,carte4, carte5, carte3, carte2],[carte2, carte4,carte6, carte2, carte5, carte3,carte2])
+#        Game.set_cards([carte2, carte6 ,carte4, carte5, carte3, carte2],[carte2, carte4,carte6, carte2, carte5, carte3,carte2])
+        
+        @counter = 1
+        file = File.new("./app/controllers/valori.in", "r")
+        while (line = file.gets)
+           # puts "#{counter}: #{line}"
+           @card = JSON.parse(line)
+           card = {}
+           card[:numar] = @card['numar']
+           card[:culoare] = @card['culoare']
+            if @counter <= 4
+                Game.carti_jucator1.push(card)
+            else
+                Game.carti_jucator2.push(card)
+            end
+            @counter = @counter + 1            
+        end
+        file.close
+        
 
     end
 
-    def index
+    def index        
+        Game.resetare
         render 'index'
     end
     
@@ -146,6 +165,9 @@ class GameController < ApplicationController
         
         @numar1 = Game.carti_jucator1.count            
         @numar2 = Game.carti_jucator2.count
+        
+        @carti1 = Game.carti_jucator1.map{|i| i[:numar]}.flatten
+        @carti2 = Game.carti_jucator2.map{|i| i[:numar]}.flatten
         
         respond_to do |format|
             format.html{render 'play'}

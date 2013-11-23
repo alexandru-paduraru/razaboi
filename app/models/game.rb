@@ -1,8 +1,8 @@
 class Game < ActiveRecord::Base
    
-   @@carti_jucator1 = ['1','2']
-   @@carti_jucator2 = ['3', '4']
-   @@pas
+   @@carti_jucator1 = []
+   @@carti_jucator2 = []
+   @@pas = 0
    
    def self.carti_jucator1
     @@carti_jucator1
@@ -46,5 +46,11 @@ class Game < ActiveRecord::Base
           @@carti_jucator2 = []  
         end
         carti
-   end    
+   end 
+   
+   def self.resetare
+       @@pas = 0
+       @@carti_jucator1 = []
+       @@carti_jucator2 = []
+   end   
 end
