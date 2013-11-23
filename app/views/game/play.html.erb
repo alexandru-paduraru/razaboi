@@ -4,6 +4,10 @@
                 <div class="game-stats">
                     <div class="header">
                         Statistici
+                        
+                        <% if @hash %>
+                            <%= @hash %>
+                        <% end %>
                     </div>
                     <div class="content">
                         <% if @pas == 0 %>

@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 int main(){
+ 
+    string elemente = "[{\"numar\":\"7\",\"culoare\":\"B\"}]";
 
-int a = 1; 
-    string elemente = "{\"1\":{\"numar\":\"7\",\"culoare\":\"B\"}}";
-
-    cout << elemente <<endl;
+    std::cout << elemente <<std::endl;
+    return 1;
 
 }

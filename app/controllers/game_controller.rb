@@ -1,12 +1,15 @@
 class GameController < ApplicationController
     
     def from_c
-#         hash_string = %x(./app/controllers/a.out)
+    
+        hash_string = %x(./app/controllers/a.out)
+        @hash = hash_string
 #         hash_string
 #         hash_string = from_c
 #         @cards = []
 #         card = JSON.parse(hash_string)
 #         @cards.append(card)
+
         carte1 = {}
         carte1[:numar] = 1
         carte1[:culoare] = '&hearts;'
