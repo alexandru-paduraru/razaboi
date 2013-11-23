@@ -42,8 +42,18 @@ class GameController < ApplicationController
            @card = JSON.parse(line)
            card = {}
            card[:numar] = @card['numar']
-           card[:culoare] = @card['culoare']
-            if @counter <= 4
+               
+               if @card['culoare'] == 'F'
+                card[:culoare] = '&spades;'
+               elsif @card['culoare'] == 'T'
+                card[:culoare] = '&clubs;'
+               elsif @card['culoare'] == 'I'
+                card[:culoare] = '&hearts;'
+               else
+                card[:culoare] = '&diams;'
+               end
+            
+            if @counter <= 10
                 Game.carti_jucator1.push(card)
             else
                 Game.carti_jucator2.push(card)
@@ -51,8 +61,7 @@ class GameController < ApplicationController
             @counter = @counter + 1            
         end
         file.close
-        
-
+        Game.carti
     end
 
     def index        
