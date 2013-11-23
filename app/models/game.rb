@@ -53,4 +53,11 @@ class Game < ActiveRecord::Base
        @@carti_jucator1 = []
        @@carti_jucator2 = []
    end   
+   
+   def self.carti
+    if @@carti_jucator1.any? && @@carti_jucator2.any?
+        @@carti_jucator1.first[:numar] = rand(8) + 1
+        @@carti_jucator2.first[:numar] = rand(8) + 1
+    end
+   end
 end
