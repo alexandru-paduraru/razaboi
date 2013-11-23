@@ -1,3 +1,10 @@
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: servicii_db
+  pool: 5
+
 development:
   adapter: postgresql
   encoding: unicode
