@@ -53,6 +53,6 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :branch => '3.0.0'
                               
                               
-group :production do
+
 	gem 'pg'
-end
+
